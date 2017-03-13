@@ -1,0 +1,14 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+TxPin     CON   0
+n9600     CON   84
+
+HIGH TxPin                       ' Set serial pin port high
+PAUSE 100                        ' Pause to initialize
+SEROUT TxPin, n9600, [12, 17]    ' Clear, turn on backlight
+SEROUT TxPin, n9600, ["Hello, world...", 13] ' Print text, line feed
+SEROUT TxPin, n9600, ["from Parallax!"]
+SEROUT TxPin, n9600, [212, 220]  ' Quarter A note
+PAUSE 3000                       ' Wait 3 seconds
+SEROUT TxPin, n9600, [18]        ' Turn backlight off
