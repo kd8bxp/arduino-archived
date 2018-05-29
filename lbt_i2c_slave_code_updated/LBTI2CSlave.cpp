@@ -1,0 +1,213 @@
+#include "Arduino.h"
+#include "LBTI2CSlave.h"
+#include <SPI.h>
+#include <Wire.h>
+/*
+The "100+ Word" Arduino Audio Shield! Speak Arduino, Speak!
+by Patrick Thomas Mitchell
+http://www.engineeringshock.com/100-word-arduino-audio-shield.html
+Library version 1.0 by LeRoy Miller
+
+If you find this or any of my projects useful or enjoyable please support me.  
+Anything I do get goes to buy more parts and make more/better projects.  
+https://www.patreon.com/kd8bxp  
+https://ko-fi.com/lfmiller  
+
+Copyright (c) 2017 LeRoy Miller
+
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses>
+*/
+
+// Connect pin#13 (SCLK) To S2 on AP23 
+// Connect pin#11 (DATOUT) To S3 on AP23 
+// Connect pin#13 (SCLK) To S2 on AP23 
+// Connect pin#10 (CS) To S1 on AP23
+// GPIO 9 = STOP
+// DO from Ap23 optional S4 - Not used here
+// ** Add stop bit so that MCU knows then  the chip has stopped talking.  OUT1 is what you'll want to use
+ 
+#define _PLAY 0x98
+#define _RAMPUP 0xA8 //COUT ramp up - this value never changes
+#define _RAMPDOWN 0xB8 //COUT ram down
+
+LBTI2CSlave::LBTI2CSlave(int cs) {
+_cs = cs;
+LBTI2CSlave::setAMPM(1);
+LBTI2CSlave:setDelay(700); //default delay is about 700 milliseconds
+_speak = 0;
+}
+
+void LBTI2CSlave::begin() {
+  SPI.begin();             // Initialize SPI
+  SPI.setClockDivider(SPI_CLOCK_DIV32); // low frequency SPI
+  pinMode(_cs,OUTPUT);    // Chip select pins is an output
+  digitalWrite(_cs,HIGH); // Set chip select to be HIGH (5v) by default.  The chip on the shield is selected when this line is brought low. 
+  SPI.setBitOrder(MSBFIRST);  // OTP requires MSB first
+  SPI.setDataMode(SPI_MODE0);  // Use MODE0, as all other modes to not work
+  delay(1000);   // One second delay
+  digitalWrite(_cs, LOW);
+  SPI.transfer(_RAMPUP);
+  SPI.transfer(0x00);
+  digitalWrite(_cs,HIGH);
+}
+
+void LBTI2CSlave::say(int value)    // Calling this function reads words individually
+{
+ _speak = 1; 
+  delay(7);
+  // Transmit Data
+  digitalWrite(_cs,LOW);
+  SPI.transfer(_PLAY);
+  SPI.transfer(value);
+  digitalWrite(_cs,HIGH);
+  delay(_wait);
+ _speak = 0; 
+  
+}
+
+/* Portions of this code based on example by Matt Ganis (matt.ganis@gmail.com) or @mattganis on Twitter
+ *  Copyright (c) 2018 Matt Ganis
+ *  New functions: sayNumber(), sayHours(), sayMinutes()
+ */
+
+int LBTI2CSlave::sayMinutes(long number) {
+if (number == 0) {
+    
+  LBTI2CSlave::say(_ZERO);   //special case for zero
+   return 0;
+}
+
+  int _period = number;
+  int _tens = _period / TEN;
+   if (_tens == 1) {
+         LBTI2CSlave::say(_sayTens[_period-10]);
+		            
+         _period = 0; }
+                 
+   if (_tens > 1) {
+      	 LBTI2CSlave::say(_sayDecades[_tens]);
+	     _period = _period - _tens*TEN; } else {
+           LBTI2CSlave::say(_ZERO);
+		       }
+          
+   if (_period == 0)  { return 0; } else {
+         LBTI2CSlave::say(_sayDigits[_period]);
+			}
+if (_AMPM == 1) {
+	LBTI2CSlave::say(_sayAMPM); }
+}
+
+int LBTI2CSlave::sayHours(long number) {
+if (number == 0) {
+   
+	 LBTI2CSlave::say(_ZERO);   //special case for zero
+	 return 0;
+}
+
+int _period = number;
+
+if (_AMPM == 1) {
+ if (_period >= 13) { _period = _period -12;}
+ if (number < 12) {_sayAMPM = _AM_; } else {_sayAMPM = _PM_; }
+}
+
+  int _tens = _period / TEN;
+   if (_tens == 1) {
+		    
+		LBTI2CSlave::say(_sayTens[_period-10]);
+		         
+         _period = 0; }
+                 
+   if (_tens > 1) {
+       	LBTI2CSlave::say(_sayDecades[_tens]);
+		 
+       _period = _period - _tens*TEN; } 
+          
+   if (_period == 0)  { return 0; } else {
+		LBTI2CSlave::say(_sayDigits[_period]);
+		
+	  }
+}
+
+int LBTI2CSlave::sayPeriod(int _period) {
+
+int _hundreds = _period / HUNDRED;
+
+if (_hundreds != 0) {
+		
+	LBTI2CSlave::say(_sayDigits[_hundreds]);
+	LBTI2CSlave::say(_HUNDRED);
+	_period = _period - (_hundreds * HUNDRED);
+	}
+
+int _tens = _period / TEN;
+
+if (_tens == 1) {
+	
+	LBTI2CSlave::say(_sayTens[_period-10]);
+	_period=0;
+	}
+
+if (_tens > 1) {
+	LBTI2CSlave::say(_sayDecades[_tens]);
+	_period = _period - _tens * TEN;
+	}
+
+if (_period == 0) { return(0); } else {
+	LBTI2CSlave::say(_sayDigits[_period]);
+		}
+}
+
+int LBTI2CSlave::sayNumber(long number) {
+
+if (number == 0) {
+	LBTI2CSlave::say(_ZERO);
+	return(0);
+	}
+int _period;
+	_period = number / MILLION;
+if (_period != 0) {
+	LBTI2CSlave::sayPeriod(_period);
+	LBTI2CSlave::say(_MILLION);
+	number=number - _period * MILLION;
+	}
+
+_period = number / THOUSAND;
+if (_period != 0) {
+	LBTI2CSlave:sayPeriod(_period);
+	LBTI2CSlave::say(_THOUSAND);
+	number = number - _period * THOUSAND;
+}
+LBTI2CSlave::sayPeriod(number);
+}
+
+void LBTI2CSlave::setAMPM(bool AMPM) {
+_AMPM = AMPM;
+}
+
+void LBTI2CSlave::setDelay(int wait) {
+_wait = wait;
+}
+
+int LBTI2CSlave::getAMPM() {
+return _AMPM;
+}
+
+int LBTI2CSlave::getDelay() {
+return _wait;
+}
+
+int LBTI2CSlave::getSpeaking() {
+return _speak;
+}
