@@ -1,0 +1,29 @@
+library_example1 - needs renamed to motor drive example (Motor Control example from DF Robot)
+
+DF ROBOT example 2 (RGB Breathing Ambient Light)- neopixels (Can't do it yet)
+
+library_example3a_blink_led - Arduino version of DF Robots example 3
+library_example3_blink_led - A slightly different version uses LED Matrix and plays R2D2 sounds
+
+library_example4_ultrasonic_display - attempt to mirror DF Robots example #4 
+
+*** IR Remote Control  ***
+Needs added to library, currently test code that works (mostly)
+DFRobot Example #5
+Sketch needs #defines for setup (that would display codes on serial console)
+(no_library) IR_Remote_Controll (needs renamed too many Ls)
+(They also explain how to get the codes - call that 5a)
+library_example6_ir_remote_control
+
+DF Robot Example 6 Line Tracking - Example #7 from me
+
+library_example2_avoid - mirrors dfrobot example 7 (Ultrasonic obstacle avoiding)
+
+** DF RObot example 8 - Light Operated Sprite 
+I have some code in the test directory that may or may not work...It looks like they are just making the robot move forward, and I was trying control - so forward it may work fine.
+
+* DFRobot example 9 - Wireless Remote Control - they are using the micro:bit controller and peer-to-peer
+library_example5_ble_controller - needs renamed (missing an e) mine uses BLE and a app on the phone or tablet.
+* arduino doesn't support peer-to-peer and may not ever *
+
+
