@@ -1,0 +1,19 @@
+Teleduino2560	KEYWORD1
+
+checkAnalogPin	KEYWORD2
+checkDigitalPin	KEYWORD2
+checkPwmPin	KEYWORD2
+checkReset	KEYWORD2
+definePinMode	KEYWORD2
+getFreeMemory	KEYWORD2
+hexDecode	KEYWORD2
+hexEncode	KEYWORD2
+instruction	KEYWORD2
+loadPresets	KEYWORD2
+pinTimers	KEYWORD2
+reset	KEYWORD2
+setDigitalOutput	KEYWORD2
+setStatusLed	KEYWORD2
+setStatusLedPin	KEYWORD2
+shiftRegisters	KEYWORD2
+shiftRegisterTimers	KEYWORD2

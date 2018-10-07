@@ -1,8 +1,11 @@
 # Arduino Archive
 
-Some of this code is mine, some is not.
-Most of this I don't use much any more
-some one might find these useful thou.
+Some of this code is mine, some is not. Most of this I don't use much any more some one might find these useful thou.  
+
+# CodeBender Code
+
+This is most of my (and other peoples) code from CodeBender.  
+Merged to Archive Repository Oct 7, 2018  
 
 ## Installation
 
@@ -10,7 +13,10 @@ TODO: Describe the installation process
 
 ## Usage
 
-TODO: Write usage instructions
+TODO: Write usage instructions  
+
+Some of this code is just test/snippets, some of it was already moved to github, but was also on codebender for history. some of it is other peoples code, if I know where it came from I tried to put that information with it. Some of it (most I would think) is my code. I wanted to save what I could, this seemed like the best way to do it.  
+Some of my personal libraries are also here.  
 
 ## Contributing
 
@@ -26,7 +32,7 @@ LeRoy Miller and many others (I'm sure)
 
 ## License
 
-I think the license below will apply to most of the sketches.
+I think the license below will apply to most of the sketches.  
 
 This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,4 +45,8 @@ This program is free software: you can redistribute it and/or modify
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses
+    along with this program.  If not, see <http://www.gnu.org/licenses>
+
+LeRoy Miller & many other people. (I tried to remember where the code came from, but I know I missed a lot - so if you know, I'll be happy to update the respository)
+
+

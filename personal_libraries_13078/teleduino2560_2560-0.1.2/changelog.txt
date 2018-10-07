@@ -1,0 +1,9 @@
+2560-0.1.2 (2014-02-16)
+- Added save parameter to setDigitalOutput with saves output as preset
+- Added additional check to where EEPROM.write() is used so that it only writes if the new value is not equal to the existing value
+
+2560-0.1.1 (2013-09-11)
+- Added method setDigitalOutputs (0x26)
+
+2560-0.1.0 (2013-04-16)
+- Initial public release.
