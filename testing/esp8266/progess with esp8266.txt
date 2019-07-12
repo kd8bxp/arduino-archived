@@ -1,0 +1,14 @@
+confirmed working good:
+
+flash download tool .. using v3.4.9.2.exe
+	Uses schematic in file: ESP8266_ConnectionDiagram.png
+
+Website .. using Arduino Mega 2560 .. with AT commands sent to esp8266
+	* wiring schematic is described in the *.ino file
+UDP Send .. using Arduino Mega 2560 .. with AT commands sent to esp8266
+	* wiring schematic is described in the *.ino file
+
+
+working on:
+
+UDP Receive message into Arduino Mega 2560 .. with AT commands sent to esp8266
