@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>ESP8266 Bitty Bot Control</title>
+	</head>
+	<body>
+	
+<h1>Bitty Bot Control</h1><br><br>
+This is a demo of how to send commands to the Bitty Bot using the ESP8266 and the command Sketch.
+<br> The ESP8266 listens for commands, and acts on them, make sure you are connected to the ESP8266 AP<br>
+<br> This code based on code found at: <br>
+<a href="http://allaboutee.com/2015/01/02/esp8266-arduino-led-control-from-webpage/">http://allaboutee.com/2015/01/02/esp8266-arduino-led-control-from-webpage/</a>
+<br><br><br>
+
+	<!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="16" class="drive">Forward</button> <!-- button for pin 16 -->
+	<br><br><button id="10" class="drive">Tight Left Turn</button> <!-- button for pin 10 -->
+	<button id="12" class="drive">Left Turn</button> <!-- button for pin 12 -->
+<button id="13" class="drive">Right Turn</button> <!-- button for pin 13 -->
+	<button id="11" class="drive">Tight Right Turn</button> <!-- button for pin 11 -->
+	
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<button id="14" class="drive">Backward Left</button> <!-- button for pin 14 -->
+	<button id="17" class="drive">Backward</button> <!-- button for pin 17 -->	
+	<button id="15" class="drive">Backward Right</button> <!-- button for pin 15 -->
+	
+	
+	<br><br><button id="18" class="drive">All Stop</button> <!-- Button for pin 18 -->
+		
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".drive").click(function(){
+				var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+				// send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+				$.get("http://192.168.4.1:80/", {drive:p}); // execute get request
+			});
+		});
+	</script>
+	</body>
+</html>
