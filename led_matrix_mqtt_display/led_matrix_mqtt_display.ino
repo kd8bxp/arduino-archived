@@ -19,8 +19,8 @@
 ESP8266WebServer httpServer(80);
 ESP8266HTTPUpdateServer httpUpdater;
 
-const char* ssid = "homeinternet";
-const char* password = "trixie4me";
+const char* ssid = "";
+const char* password = "";
 const char* mqtt_server = "test.mosquitto.org";
 
 

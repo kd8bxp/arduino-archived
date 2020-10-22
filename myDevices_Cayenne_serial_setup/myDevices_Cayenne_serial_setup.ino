@@ -57,7 +57,7 @@ ATTENTION!
 #include <CayenneSerial.h>
 
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
-char token[] = "fqz0vgvw0t";
+char token[] = "";
 
 void setup()
 {

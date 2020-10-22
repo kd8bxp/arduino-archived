@@ -39,10 +39,10 @@ String _BSSID = "";
 
 
 int status = WL_IDLE_STATUS;
-String googleKey = "AIzaSyA-sHSo7MXSJUmV6rzgOo5IP-qMBrdG5vQ";
+String googleKey = "";
 
-char yourSSID[] = "homeinternet";
-char yourPassword[] = "trixie4me";
+char yourSSID[] = "";
+char yourPassword[] = "";
 String jsonString = "{\n";
 double latitude    = 39.535964;
 double longitude   = -84.381469;

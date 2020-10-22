@@ -1,6 +1,6 @@
  #include <SoftwareSerial.h>
-#define SSID "base83" // insert your SSID
-#define PASS "D809928B0A1859CF23A76380E1" // insert your password
+#define SSID "" // insert your SSID
+#define PASS "" // insert your password
 #define DEST_HOST   "retro.hackaday.com"
 #define DEST_IP     "192.254.235.21"
 #define TIMEOUT     5000 // mS

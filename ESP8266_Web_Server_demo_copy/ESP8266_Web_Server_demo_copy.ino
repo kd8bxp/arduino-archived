@@ -19,8 +19,8 @@ enum {WIFI_ERROR_NONE=0, WIFI_ERROR_AT, WIFI_ERROR_RST, WIFI_ERROR_SSIDPWD, WIFI
 
 #define BUFFER_SIZE 128
 
-#define SSID "base83"
-#define PASS "D809928B0A1859CF23A76380E1"
+#define SSID ""
+#define PASS ""
 #define PORT  "8080"      // using port 8080 by default
 
 char buffer[BUFFER_SIZE];

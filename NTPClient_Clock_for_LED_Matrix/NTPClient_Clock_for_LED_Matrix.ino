@@ -24,8 +24,8 @@
 #include <Max72xxPanel.h>
 
 #ifndef STASSID
-#define STASSID "homeinternet"
-#define STAPSK  "trixie4me"
+#define STASSID ""
+#define STAPSK  ""
 #endif
 #define TIMEOFFSET -14400 //Find your Time Zone off set Here https://www.epochconverter.com/timezones OFF Set in Seconds
 

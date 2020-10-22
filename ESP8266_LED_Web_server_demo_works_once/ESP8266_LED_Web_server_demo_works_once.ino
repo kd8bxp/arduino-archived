@@ -43,7 +43,7 @@
 
       //connect to router
       //createWiFi("TEST", "");
-      connectWiFi("base83", "D809928B0A1859CF23A76380E1");
+      connectWiFi("", "");
 
       //test if the module is ready
       dbgTerminal.print("AT : ");
