@@ -1,0 +1,11 @@
+These are 8x8 led dot matrix but appear to create the correct hex files
+http://dotmatrixtool.com/#
+https://www.riyas.org/2013/12/online-led-matrix-font-generator-with.html
+
+Some of them seem like they are rotated incorrectly, but should be easy enough to fix.
+
+
+This is the only tool I've found that is even close to creating a font, but the font is rotated incorrectly.
+
+https://kapusta.cc/2020/03/20/fontedit/
+https://github.com/ayoy/fontedit

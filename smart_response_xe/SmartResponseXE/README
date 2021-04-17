@@ -1,0 +1,94 @@
+Based on Larry's SMART Response XE support library
+
+Features:
+--------
+1) LCD initialization (4-gray levels) and support to draw 4 sizes of characters and outline+filled rectangles
+2) Functions to erase/write/read the external 128K byte SPI FLASH memory
+3) Fast GPIO access with simplified pin numbering (e.g. PORTD bit3 = pin 0xD3)
+4) Scan the keyboard and return pressed keys translated with the shift/sym keys
+
+Installation:
+------------
+1) Download the library: https://github.com/bitbank2/SmartResponseXE/archive/master.zip
+2) (In the Arduino IDE) Sketch > Include Library > Add .ZIP Library > select the downloaded file > Open
+
+Getting Started:
+---------------
+The first thing to do is initialize and clear the LCD. The pin numbers for the SRXE are:
+  // CS, D/C, RESET
+  SRXEInit(0xe7, 0xd6, 0xa2); // initialize display
+Next, you can draw some text or rectangles. The color can be 0-3 (0=off, 3=fully on)
+  SRXEWriteString(0,120,"Hello World!", FONT_LARGE, 3, 0); // draw large black text at x=0,y=120, fg=3, bg=0
+
+----------------
+fdufnews additions:
+
+I have added some modification to Larry's work  
+// 18/11/2019 fdufnews keyboard map modification  
+// DEL          --> enter (0x0D) (more intuitive position)  
+// shift + DEL  --> backspace (0x08)  
+// SYM + I      --> ;  
+// SYM + Z      --> *  
+// SYM + X      --> /  
+// square root  --> ESC  
+
+// 8/12/2019 fdufnews added function to define scroll area  
+//  Set Scroll Area  
+// inputs:  
+// TA: top fixed area  
+// SA: scroll area  
+// BA: bottom fixed area  
+// TA + SA + BA = 160  
+//  
+//  fdufnews 12/2019  
+//  
+void SRXEScrollArea(int TA, int SA, int BA)  
+   
+//    SRXELoadBitmapRLE
+//  load a bitmap in the display RAM
+//  input
+//    x, y coordinate of top left in the display
+//    btmp array containing the bitmap compressed with RLE
+//
+void SRXELoadBitmapRLE(int x, int y, const uint8_t *btmp)
+
+The bitmap is generated with generateBitmap
+
+
+---------------
+Additions:
+
+Brutally lifted from Adafruit GFX library and modified to work with the Smart Response XE by LeRoy Miller, KD8BXP April 2021
+Added 
+SRXEdrawCircle (int16_t x0, int16_t y0, int16_t r, uint16 color);
+Where X0 and Y0 are the Center point of the circle, r is the radius, and color see above
+SRXEwriteLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color);
+Where X0, Y0 are the start point cooridinate, X1, Y1 are the end point coordinate, color see above.  
+SRXEdrawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
+Where X0, Y0 is the vertex 0 coordinate, X1, Y1 is the vertex 1 coordinate, X2, Y2 is the vertex 2 coordinate, color see above.  
+
+Fonts: The original Fonts were removed, and put into a seperate header file.
+More fonts were added to the fonts folder and can be called to be  used, see the examples for correct usage.
+
+SRXEWriteString was slightly modified:
+SRXEWriteString(int x, int y, char *szMsg,int iSize, const unsigned char ucFont[], int iFGColor, int iBGColor);
+const unsigned char ucFont[] This is the font name listed below (see examples)
+
+These fonts were found at: https://jared.geek.nz/2014/jan/custom-fonts-for-microcontrollers
+
+Other notes: Large Fonts are 3 sets of 3 pixels (The fonts provided are 8 bit fonts)
+ Small Fonts are 2 sets of 3 pixels 6 bit. 
+ Some of the fonts work better then others, variable spaced fonts are currently a problem. Monospaced seem to work best.
+ Font and library modifications by LeRoy Miller, kd8bxp Mar/Apr 2021.
+
+In the other directory, you'll find the TTF files for the fonts from jared.geek.nz, the fontgen.py app (which I haven't been able to get to work correctly)
+A set of test_fonts which were found in various (now unknown) places across the internet, with some notes on creating fonts, bitmaps, and icons.
+
+April 10, 2021 a beginning ICON set was added to the examples, this is very much a work in progress.
+
+April 10, 2021 Added Inverse Code (this will reverse the screen)
+SRXEInverse(0) normal, SRXEInverse(1) reverse after setting it is recommended to also clear the screen
+Added SRXEClearScreen() - functionally the same as SRXEFill(0)
+removed the need to set the iCSPin, iDCPin, iResetPin when calling SRXEInit() (simplified hopefully)
+-LeRoy Miller, KD8BXP April 2021
+
