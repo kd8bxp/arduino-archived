@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /var/www/html/fotoni/public/2021
+PAG_LEFT=103
+PAG_RIGHT=101
+wget "https://www.servizitelevideo.rai.it/televideo/pub/tt4web/Nazionale/16_9_page-${PAG_LEFT}.png"
+wget "https://www.servizitelevideo.rai.it/televideo/pub/tt4web/Nazionale/16_9_page-${PAG_RIGHT}.png"
+convert 16_9_page-${PAG_LEFT}.png 16_9_page-${PAG_RIGHT}.png +append -background black -colorspace Gray -resize "960x540!" -negate -gamma 0.75 -sharpen 0x1.333 -colors 16 pgm:epd_image_3.pgm
+rm -f 16_9_page-*.png*
+logger "$0 - Pagine ${PAG_LEFT} e ${PAG_RIGHT} convertite"
