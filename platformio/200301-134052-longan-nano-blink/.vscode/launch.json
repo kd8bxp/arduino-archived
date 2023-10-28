@@ -1,0 +1,47 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/.pio/build/sipeed-longan-nano/firmware.elf",
+            "projectEnvName": "sipeed-longan-nano",
+            "toolchainBinDir": "/home/lfmiller/.platformio/packages/toolchain-gd32v/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "/home/lfmiller/.platformio/platforms/gd32v/misc/svd/GD32VF103.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/.pio/build/sipeed-longan-nano/firmware.elf",
+            "projectEnvName": "sipeed-longan-nano",
+            "toolchainBinDir": "/home/lfmiller/.platformio/packages/toolchain-gd32v/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "/home/lfmiller/.platformio/platforms/gd32v/misc/svd/GD32VF103.svd"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/.pio/build/sipeed-longan-nano/firmware.elf",
+            "projectEnvName": "sipeed-longan-nano",
+            "toolchainBinDir": "/home/lfmiller/.platformio/packages/toolchain-gd32v/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "/home/lfmiller/.platformio/platforms/gd32v/misc/svd/GD32VF103.svd",
+            "loadMode": "manual"
+        }
+    ]
+}

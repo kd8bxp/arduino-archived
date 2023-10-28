@@ -1,0 +1,55 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/include",
+                "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/src",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral/Include",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver/Include",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/drivers",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/env_Eclipse",
+                "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/stubs",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/include",
+                    "/home/lfmiller/Documents/PlatformIO/Projects/200301-134052-longan-nano-blink/src",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_standard_peripheral/Include",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/GD32VF103_usbfs_driver/Include",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/drivers",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/env_Eclipse",
+                    "/home/lfmiller/.platformio/packages/framework-gd32vf103-sdk/RISCV/stubs",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60104",
+                "USE_STDPERIPH_DRIVER",
+                "HXTAL_VALUE=8000000U",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compilerPath": "/home/lfmiller/.platformio/packages/toolchain-gd32v/bin/riscv-nuclei-elf-gcc",
+            "compilerArgs": [
+                "-march=rv32imac",
+                "-mabi=ilp32",
+                "-mcmodel=medlow",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
