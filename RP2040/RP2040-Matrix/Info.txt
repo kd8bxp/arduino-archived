@@ -1,0 +1,7 @@
+RP2040-Matrix is actually made by Waveshare here is some info I found:
+
+https://www.spotpear.com/index/study/detail/id/1070.html
+https://www.waveshare.com/wiki/RP2040-Matrix
+
+Waveshare's tutorial suggest to selected the Waveshare RP2040 Zero board
+and Raspberry Pi Pico/RP2040 core version 2.6.4 by Earle F. Philhower, III
