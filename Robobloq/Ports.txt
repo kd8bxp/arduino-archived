@@ -1,0 +1,20 @@
+Orange Port (Port 4)
+SDA0 - PB3 - D11
+SCL0 - PD3 - D3
+AD0 is on sn74lv4051
+
+PORT 3
+Hardware I2C (maybe)
+SDA1 PC4 - A4
+SCL1 PC5 - A5
+AD1 on sn74lv4051
+
+PORT 2
+SDA3 PC2 - A2
+SCL3 PC3 - A3
+AD6 on sn74lv4051
+
+PORT 1
+SDA2 PC0 - A0
+SCL2 PC1 - A1
+AD0 on sn74lv4051
