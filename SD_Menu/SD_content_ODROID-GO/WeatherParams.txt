@@ -1,0 +1,5 @@
+CITY=Moscow; Your City Name
+COUNTRY=RU; Your Country initials
+LANGUAGE=EN; Your Language initials (EN for english)
+APIKEY=59a29212314bba71; Your WUndeground Key
+TIME_OFFSET=2; Your local time offset from GMT
