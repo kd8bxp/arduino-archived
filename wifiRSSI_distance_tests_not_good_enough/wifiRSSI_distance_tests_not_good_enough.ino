@@ -21,8 +21,8 @@ Be aware that this is a very basic attempt and should perhaps be considered more
 #include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
  #include "SSD1306Wire.h" // legacy include: `#include "SSD1306.h"`
 
-#define WIFI_SSID "homeinternet"
-#define WIFI_PASSWORD "trixie4me"
+#define WIFI_SSID "ssid"
+#define WIFI_PASSWORD "pass"
 
 //TxPower is RSSI at 1 meter (3 feet)
 //distance in meters

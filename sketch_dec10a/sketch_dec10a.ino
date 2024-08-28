@@ -19,8 +19,8 @@ int ledTestFreq = 0;
 int BuzzerTestFreq = 0;
 
 //Wi-Fi config
-const char *ssid = "homeinternet";
-const char *password = "trixie4me";
+const char *ssid = "ssid";
+const char *password = "pass";
 
 //WS2812 config
 const uint16_t PixelCount = 25;

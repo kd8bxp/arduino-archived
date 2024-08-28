@@ -17,8 +17,8 @@
 #define MODE_SPK 1
 #define DATA_SIZE 1024
 // Replace with your network credentials
-const char* ssid     = "homeinternet";
-const char* password = "trixie4me";
+const char* ssid     = "";
+const char* password = "";
 const char* mqtt_server = "simplesi.cloud";
 
 #define deviceName "kd8bxp"

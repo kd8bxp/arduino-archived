@@ -2,8 +2,8 @@
 #include <WiFi.h>
 
 
-const char* ssid = "MySpectrumWiFi68-2G";
-const char* password =  "loudowl369";
+const char* ssid = "ssid";
+const char* password =  "pass";
 
 #define LED_PIN  27
 

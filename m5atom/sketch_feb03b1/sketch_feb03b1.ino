@@ -22,8 +22,8 @@ int x; // Width of the Display
 int i = 0; // Counter
 int clr = 0; // Counter for Indexing Array of Colors
 
-const char* ssid = "homeinternet";
-const char* password = "trixie4me";
+const char* ssid = "ssid";
+const char* password = "pass";
 const char* mqtt_server = "test.mosquitto.org";
 
 //long lastMsg = 0;

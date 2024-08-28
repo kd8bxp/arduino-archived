@@ -6,8 +6,8 @@
 #include "src/ArduinoHttpClient/ArduinoHttpClient.h"
 
 /*____Wifi _____________________*/
-#define WIFI_SSID "MySpectrumWiFi68-2G"       // Enter your SSID here
-#define WIFI_PASS "loudowl369"    // Enter your WiFi password here
+#define WIFI_SSID "ssid"       // Enter your SSID here
+#define WIFI_PASS "pass"    // Enter your WiFi password here
 
 const int NetworkTimeout = 30*1000;
 const int NetworkDelay = 2000; 

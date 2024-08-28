@@ -5,8 +5,8 @@
 
 #define JOY_ADDR 0x38
 
-const char* ssid = "MySpectrumWiFi68-2G";
-const char* password = "loudowl369";
+const char* ssid = "ssid";
+const char* password = "pass";
 const char* mqtt_server = "broker.mqtt-dashboard.com";
 
 #define SUBSCRIBETOPIC "kd8bxp/MQTTBot/OUT"

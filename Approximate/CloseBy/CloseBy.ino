@@ -23,7 +23,7 @@ void setup() {
     Serial.begin(115200);
     pinMode(LED_PIN, OUTPUT);
 digitalWrite(LED_PIN, HIGH); //m5stickc HIGH is off opposite
-    if (approx.init("MySpectrumWiFi68-2G", "loudowl369")) {
+    if (approx.init("ssid", "pass")) {
         approx.setProximateDeviceHandler(onProximateDevice, APPROXIMATE_PERSONAL_RSSI);
         approx.begin();
     }

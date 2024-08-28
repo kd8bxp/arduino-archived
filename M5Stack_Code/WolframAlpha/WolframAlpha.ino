@@ -8,8 +8,8 @@
 
 #define USE_SERIAL Serial
 
-#define WIFI_SSID "MySpectrumWiFi68-2G"
-#define WIFI_PASSWORD "loudowl369"
+#define WIFI_SSID "ssid"
+#define WIFI_PASSWORD "pass"
 
 int BUTTON_HOME = 37;
 

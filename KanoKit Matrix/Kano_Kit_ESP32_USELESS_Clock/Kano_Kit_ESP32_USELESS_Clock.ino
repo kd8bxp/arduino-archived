@@ -57,8 +57,8 @@ CRGB leds[NUM_LEDS];
 //int x    = matrix.width();
 bool flag = false;
 
-char ssid[] = "MySpectrumWiFi68-2G";
-char pass[] = "loudowl369";
+char ssid[] = "";
+char pass[] = "";
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 0; //-14400 + -3600;

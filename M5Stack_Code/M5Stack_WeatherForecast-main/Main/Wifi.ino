@@ -1,7 +1,7 @@
 #include "WiFi.h"
 
-char* factoryssid = "MySpectrumWiFi68-2G";
-char* factorypassword =  "loudowl369";
+char* factoryssid = "ssid";
+char* factorypassword =  "pass";
 
 void wifiBegin() {
   m5.begin();

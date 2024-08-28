@@ -13,8 +13,8 @@
 #include "BaiduRest.h"
 #include "src/M5Atom/M5Atom.h"
 
-const char *WifiSSID = "MySpectrumWiFi68-2G";
-const char *WifiPWD  = "loudowl369";
+const char *WifiSSID = "ssid";
+const char *WifiPWD  = "pass";
 
 #define CONFIG_I2S_BCK_PIN     -1
 #define CONFIG_I2S_LRCK_PIN    5

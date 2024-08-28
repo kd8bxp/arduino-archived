@@ -18,8 +18,8 @@ AudioFileSourceSPIFFS *file;
 AudioOutputI2S *out;
 AudioFileSourceID3 *id3;
 
-const char* ssid     = "homeinternet";
-const char* password = "trixie4me";
+const char* ssid     = "ssid";
+const char* password = "pass";
 
 //WiFiClientSecure client;
 const char* rootCACertificate = \

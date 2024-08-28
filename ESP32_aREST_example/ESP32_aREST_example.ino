@@ -14,8 +14,8 @@
 aREST rest = aREST();
 
 // WiFi parameters
-const char* ssid = "homeinternet";
-const char* password = "trixie4me";
+const char* ssid = "ssid";
+const char* password = "pass";
 
 // Create an instance of the server
 WiFiServer server(80);

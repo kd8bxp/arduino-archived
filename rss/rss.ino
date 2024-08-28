@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include "src/rssClass.h"
 
-const char *ssid = "MySpectrumWiFi68-2G";
-const char *password = "loudowl369";
+const char *ssid = "ssid";
+const char *password = "pass";
 
 const char *url = "http://www.hamqsl.com/solarxml.php";
 const char *tag = "solardata";

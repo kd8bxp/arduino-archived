@@ -7,8 +7,8 @@
 AtomMotion Atom;
 int direction = 0; // 0 = stop, 1 = forward, 2 = reverse, 3 = left, 4 = right
 
-const char* ssid = "MySpectrumWiFi68-2G";
-const char* password = "loudowl369";
+const char* ssid = "ssid";
+const char* password = "pass";
 const char* mqtt_server = "broker.mqtt-dashboard.com";
 
 #define SUBSCRIBETOPIC "kd8bxp/MQTTBot/IN"

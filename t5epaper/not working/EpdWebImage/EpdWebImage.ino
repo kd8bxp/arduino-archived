@@ -17,10 +17,10 @@
 //#include "secrets.h"
 // Define your WiFi SSID and password in "secrets.h" file
 #if !defined(WIFI_SSID)
-#define WIFI_SSID "MySpectrumWiFi68-2G"
+#define WIFI_SSID ""
 #endif
 #if !defined(WIFI_PWD)
-#define WIFI_PWD "loudowl369"
+#define WIFI_PWD ""
 #endif
 
 // Possible results of image download
