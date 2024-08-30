@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For ROBONII_MOTOR_H
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Robonii_IRPod_Driver	KEYWORD1
+Robonii_IRPod	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+InitTWI	KEYWORD2
+IrpodReqVersion	KEYWORD2
+SetLED	KEYWORD2
+
+
+
+#######################################
+# Constants (LITERAL2)
+#######################################
+IRPOD_LED_OFF		LITERAL1
+IRPOD_LED_ON		LITERAL1
+IRPOD_LED_FLASH_SLOW		LITERAL1
+IRPOD_LED_FLASH_FAST		LITERAL1
+IRPOD_LED_YELLOW		LITERAL1
+IRPOD_LED_RED_RIGHT		LITERAL1
+IRPOD_LED_RED_LEFT		LITERAL1
+IRPOD_LED_BICOLOR_GREEN		LITERAL1
+IRPOD_LED_BICOLOR_RED		LITERAL1
+
+
+

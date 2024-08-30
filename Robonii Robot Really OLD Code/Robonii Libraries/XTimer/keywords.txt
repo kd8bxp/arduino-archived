@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For xTimer
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Robonii_Sound_Driver	KEYWORD1
+Robonii_Sounds	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+InitSound	KEYWORD2
+PlaySound	KEYWORD2
+PlayAdvancedSound	KEYWORD2
+sound_task	KEYWORD2
+BuildCustomSound	KEYWORD2
+StopSound	KEYWORD2
+SoundPriority	KEYWORD2
+sound_type_e 	KEYWORD2
+Sound_t 	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+DAC_PORT_A		LITERAL1
+
+
+
