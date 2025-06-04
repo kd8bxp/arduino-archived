@@ -1,0 +1,20 @@
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\bin\Debug\ATcommandHC06.exe
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\bin\Debug\ATcommandHC06.pdb
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\bin\Debug\ATcommandHC06.xml
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ATcommandHC06.Form1.resources
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ATcommandHC06.Resources.resources
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ATcommandHC06.exe
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ATcommandHC06.xml
+C:\PLC UPDATE\Mobile Application Using Android Bluetooth And PLC\ATcommandHC06\obj\x86\Debug\ATcommandHC06.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.exe
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.xml
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\bin\Debug\ATcommandHC06.exe
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\bin\Debug\ATcommandHC06.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\bin\Debug\ATcommandHC06.xml
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.Form1.resources
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.Resources.resources
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ATcommandHC06\obj\x86\Debug\ATcommandHC06.vbproj.GenerateResource.Cache

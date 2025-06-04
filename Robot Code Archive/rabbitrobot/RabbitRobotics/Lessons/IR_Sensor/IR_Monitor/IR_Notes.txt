@@ -1,0 +1,37 @@
+found tutroial from web site:
+https://arduino-info.wikispaces.com/IR-RemoteControl
+
+Copied the zip file from web site:
+https://github.com/shirriff/Arduino-IRremote
+
+Used the Arduino IDE to "Include Library ... Add Zip Library" .. 
+
+Copied the "IRremote: IRrecvDemo" to the Arduino sketch.  
+Compiled the file. 
+Found a conflict with the currently installed IR Library.  
+Needed to delete the "Robot IR" library.  
+
+
+Using 3 different remote control devices.  
+All transmitters seem to work just fine.. Radio Shack unit (Make: IT) appeared to be the best.
+
+
+
+Used four different IR receivers.
+
+Flame sensor - Required transmitter to be close and did not have consistant data
+
+TL1838 (metal cross) - worked nice and Easy to connect.  The data was not consistant.
+
+TSOP 8Zm4 IR receiver - Compatible with the TSOP4838
+Required to connect with currect limit resistor(100Ohm) at voltage source, voltage stabilizer capacitor(0.1uF) ,,  (pull-up resistor not required).  Data is VERY consistant.  
+
+last IR TSOP4838 device .. failed.. no output at all. might have been damaged during wire-up or testing.
+
+The EXACT sketch from the web site works.  
+I copied it the Arduino IDE and compiled.. Download ... 
+Open the serial port monitor.  
+Watch the data come to the screen according to the IR-remote control button that I push.
+Holding down the button on the thin remotes can cause a "ffffffff" signal and is normal as "repeat data".
+
+

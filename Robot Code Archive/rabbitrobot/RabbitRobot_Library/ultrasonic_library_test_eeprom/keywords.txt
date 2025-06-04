@@ -1,0 +1,7 @@
+RabbitRobot     KEYWORD1
+forward     KEYWORD1
+backwards       KEYWORD1
+right       KEYWORD1
+left        KEYWORD1
+update      KEYWORD1
+IsRunning       KEYWORD1

@@ -1,0 +1,19 @@
+Checked and working with demo Bitty Rover (Arduino Mega 2560)- LeRoy Miller Aug 1, 2017
+
+*Uploaded Aug 29
+
+*BittyRobot_LCD (Backlight on demo robot not working?)
+*BittyRobot_Random_4_wire_Dance (Compact Rover UNO code based off Bitty Rover Random Dance code)
+*BittyRobot_Random_4_wire_Dance_with_pen (Compact Rover UNO code based off Bitty Rover Random Dance code)
+*BittyRobot_Random-Dance
+*BittyRobot_Random-Dance_with_pen
+*BittyRobot_Ultrsonic_with_I2C_LCD (backlight on demo robot not working)
+*BittyRobot_Line-Follower (Works but needs improvement)
+*BittyRobot_Random-Dance-with-functions (added motor drive functions)
+*BittyRobot_6_wire_Motor_function_control
+*BittyRobot_Random_4_wire_Dance_with_function
+*BittyRobot_4_wire_Motor_function_control
+*BittyRobot_4_wire_Motor_function_control_without_delay
+*BittyRobot_4_wire_Motor_function_control_without_delay_make_a_b (ox got cut off should be make a box with problem solving skill)
+*BittyRobot_6_wire_Motor_function_control_without_delay
+*BittyRobot_6_wire_Motor_function_control_without_delay_make_a_b (ox got cut off should be make a box with problem solving skill)

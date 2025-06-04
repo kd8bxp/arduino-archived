@@ -1,0 +1,11 @@
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComMonitor2015.vbproj.GenerateResource.Cache
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\bin\Debug\ComTests2015.exe
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\bin\Debug\ComTests2015.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.Form1.resources
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.Resources.resources
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.exe
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\bin\Debug\ComTests2015.exe.manifest
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\bin\Debug\ComTests2015.application
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.exe.manifest
+C:\Storage\arduino\Bluetooth\SerialComTest2015\ComMonitor2015\obj\x86\Debug\ComTests2015.application

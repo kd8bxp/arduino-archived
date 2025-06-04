@@ -1,0 +1,135 @@
+
+
+AT command set 
+
+The way to the AT command mode: supply power to the module, it will enter to the AT mode if it 
+
+needn’t pair. The interval of command is about 1 second. 
+
+Default parameter: Baud rate:9600N81, Password:1234 
+
+1. Test communication 
+
+Send: AT (please send it every second) 
+
+Back: OK 
+
+2. Reset the Bluetooth serial baud rate 
+
+Send: AT+BAUD1 
+
+Back: OK1200 
+
+Send: AT+BAUD2 
+
+Back: OK2400 
+
+...... 
+
+1---------1200 
+
+2---------2400 
+
+3---------4800 
+
+4---------9600 (Default) 
+
+5---------19200 
+
+6---------38400 
+
+7---------57600 
+
+8---------115200 
+
+9---------230400 
+
+A---------460800 
+
+B---------921600 
+
+C---------1382400 
+
+PC can’t support the baud rate lager than 115200. The solution is: make the MCU have higher 
+
+baud rate (lager than 115200) through programming, and reset the baud rate to low level through 
+
+the AT command. 
+
+The baud rate reset by the AT command can be kept for the next time even though the power is 
+
+cut off. 
+
+
+3. Reset the Bluetooth name 
+
+Send: AT+NAMEname 
+
+Back: OKname 
+
+Parameter name: Name needed to be set (20 characters limited) 
+
+Example: 
+
+Send: AT+NAMEbill_gates 
+
+Back: OKname 
+
+Now, the Bluetooth name is reset to be “bill_gates” 
+
+The parameter can be kept even though the power is cut off. User can see the new Bluetooth 
+
+name in PDA refresh service. (Note: The name is limited in 20 characters.) 
+
+
+
+4. change the Bluetooth pair password 
+
+Send: AT+PINxxxx 
+
+Back:OKsetpin 
+
+Parameter xxxx: The pair password needed to be set, is a 4-bits number. This command can be 
+
+used in the master and slave module. At some occasions, the master module may be asked to 
+
+enter the password when the master module tries to connect the slave module (adapter or cell- phone). Only if the password is entered, the successful connection can be built. At the other 
+
+occasions, the pair can be finish automatically if the master module can search the proper slave 
+
+module and the password is correct. 
+
+Besides the paired slave module, the master can connect the other devices who have slave 
+
+module, such as Bluetooth digital camera, Bluetooth GPS, Bluetooth serial printer etc. 
+
+Example: 
+
+Send: AT+PIN8888 
+
+Back: OKsetpin 
+
+Then the password is changed to be 8888, while the default is 1234. 
+
+This parameter can be kept even though the power is cut off. 
+
+5. No parity check ( The version, higher than V1.5, can use this command ) 
+
+Send: AT+PN (This is the default value) 
+
+Back: OK NONE 
+
+
+6. Set odd parity check ( The version, higher than V1.5, can use this command ) 
+
+Send: AT+PO 
+
+Back: OK ODD 
+
+
+7. Set even parity check( The version, higher than V1.5, can use this command ) 
+
+Send: AT+PE 
+
+Back: OK EVEN 
+

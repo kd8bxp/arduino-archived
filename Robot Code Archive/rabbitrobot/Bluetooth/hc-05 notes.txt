@@ -1,0 +1,89 @@
+ The Keyes / YourDuino BT Board
+Sections of the BT Board (Above): BT-HC-05-Back-400.jpg
+•The Green HC-05 sub-module is soldered on top of the Blue BT Board
+•The HC-05 module includes the Radio and Memory chips, 26 MHz crystal, antenna and RF matching network.
+•The right section of the BT Board has connection pins for power and signals as well as a 5V to 3.3V Regulator, LED, and level shifting.
+
+ HC-05 PinOut (Right) :
+•KEY: If brought HIGH before power is applied, forces AT Command Setup Mode. LED blinks slowly (2 seconds)
+•VCC: +5 Power
+•GND: System / Arduino Ground
+•TXD: Transmit Serial Data from HC-05 to Arduino Serial Receive. NOTE: 3.3V HIGH level: OK for Arduino
+•RXD: Receive Serial Data from Arduino Serial Transmit
+•STATE: Tells if connected or not
+
+
+ 
+
+ BlueToothCommandUtility: (LINK) Arduino Sketch to send and receive Command Mode AT commands to HC-05 to change configuration.
+
+
+ COMMAND and DATA TRANSFER MODES:
+
+ The module has two modes of operation, Command Mode where we can send AT commands to it and Data Mode where it transmits and receives data to another bluetooth module.
+
+ The default mode is DATA Mode, and this is the default configuration, that may work fine for many applications:
+•Baud Rate: 9600 bps, Data : 8 bits, Stop Bits: 1 bit, Parity : None, Handshake: None
+•Passkey: 1234
+•Device Name: HC-05
+In some cases you may want to change some of the configuration setup values. There are two ways to get into Command Mode:
+1.Connect the KEY pin high before applying power to the module. This will put the module into command mode at 38400 baud. This is commonly used, and needed if you don't know the baud rate the module is set to. You can use the BlueToothCommandUtility (LINK) for this.
+2.Apply power to the module then pull the KEY pin high. This will enter command mode at the currently configured baud rate. This is useful if you want to send AT commands from a microcontroller as the KEY pin can be controlled from one of the microcontroller pins. BUT you need to know the currently configured Baud Rate.
+
+ Commands are sent to the module in UPPERCASE and are terminated with a CR/LF pair.
+
+
+ Command Mode Commands:
+The format of commands is:
+•Always starts with "AT"
+•Then "+" followed by <ParameterName>
+•Then either:?? (returns current value of parameter)
+?= (New Value of parameter) 
+
+A few examples:
+•AT (AT Test command. Should respond with OK)
+•AT+VERSION? (show the firmware version)
+•AT+UART=9600,0,0 (Set baud rate to 9600, 1 stop bit, no parity)
+
+
+ Bluetooth Master Mode:
+To configure the module as Bluetooth Master and to pair with another bluetooth module follow these steps. First we need to put the module into command mode as above by pulling the CMD pin high before power on. (Use the BlueToothCommandUtility (LINK) for this.)
+Enter these commands in order:
+•AT+RMAAD Clear any paired devices
+•AT+ROLE=1 Set mode to Master
+•AT+RESET After changing role, reset is required
+•AT+CMODE=0 Allow connection to any address
+•AT+INQM=0,5,5 Inquire mode - Standard, stop after 5 devices found or after 5 seconds
+•AT+PSWD=1234 Set PIN. Should be same as slave device
+•AT+INIT Start Serial Port Profile (SPP) ( If Error(17) returned - ignore as profile already loaded) 
+•AT+INQ Start searching for devices 
+
+ A list of devices found will be displayed, one of which is the slave module. The format of the output is
+
+ +INQ:address,type,signal
+
+ The address of the module is what we need and is in the format 0123:4:567890
+
+NOTE: We need to replace the colons with commas when we use the address with the following commands.
+
+ If you get more than one device listed and don't know which one is the slave module, you can query the module for it's name using:
+ AT+RNAME? <address>
+ e.g. (don't forget to change the colons to commas)
+ AT+RNAME? 0123,4,567890
+
+ Once we are happy we have the correct slave address, we need to pair with it, so carry on with the next set of commands:
+
+•AT+PAIR=<address>,<timeout> The timeout is in seconds and if you need to type in the pin on the slave device you need to give enough time to do this.
+•AT+BIND=<address> Set bind address to the slave address
+•AT+CMODE=1 Allow master to ONLY connect to bound address (slave). This allows the master to automatically connect to the slave when switched on
+•AT+LINK=<address> Connect to slave. 
+
+
+ Slave Mode:
+
+ The HC-05 bluetooth module can also act as a slave. There are fewer commands to set this up:
+
+•AT+ORGL Reset to defaults
+•AT+RMAAD Clear any paired devices
+•AT+ROLE=0 Set mode to SLAVE
+•AT+ADDR Display SLAVE address

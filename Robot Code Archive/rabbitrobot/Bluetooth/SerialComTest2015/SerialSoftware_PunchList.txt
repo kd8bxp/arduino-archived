@@ -1,0 +1,43 @@
+The software is functioning minimally now...  
+It connects to the serial port.  
+It sends string data.  
+It receives and displays visible string data.  
+ 
+
+
+I want to add more capabilities for diversity of usage.  So many people want to use the serial port.. for so many different projects.
+ 
+Set the port attributes: Baud Rate, Data bits, Parity, Stop bits,  pause between sent characters.
+Set/Read the DTR, CTS, RTS, DSR, TD, RD, DCD
+Flow Control
+Carrier Detect?
+Send hex characters
+View as Binary Hex
+View as Binary Decimal
+Text ASCII
+Text ISO
+Text EIA
+ 
+VB CR LF 
+Send Byte masked data
+Show received invisible characters as (hex values)
+Log communications to file
+Save Configuration to file
+ 
+Preset arrays of command characters
+Timeout
+ 
+Save or Load contents of the Text Box to/from a text file
+ (identify the data delimiters)
+ 
+Show a counter for the amount of data received. (How many characters are in the received text control)
+ 
+Generate random data to send through the serial port ( minimum value, Max value, Conditions of CTS/DTR)
+Send continuous data (count up to 1024, Grey code, ABCs, )  
+ 
+Help screen to show the serial port pinout
+Help screen to tell a good protocol for communications with Arduino
+ 
+Detect serial chip?
+Poll the remote device for: communication protocol, firmware number, 
+ 

@@ -1,0 +1,5 @@
+Uses a MAX7219 Shift Regsister.
+
+CLK - UNO Pin 13
+DIN - UNO Pin 11
+CS - UNO Pin 10

@@ -1,0 +1,22 @@
+int latchPin = 8;
+int clockPin = 12;
+int dataPin = 11; //这里定义了那三个脚
+
+unsigned char table[] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
+
+void setup ()
+{
+  pinMode(latchPin,OUTPUT);
+  pinMode(clockPin,OUTPUT);
+  pinMode(dataPin,OUTPUT); //让三个脚都是输出状态
+}
+void loop()
+{
+  for(int i=0; i<8; i++)
+  {
+    digitalWrite(latchPin,LOW); //将ST_CP口上面加低电平让芯片准备好接收数据
+    shiftOut(dataPin,clockPin,MSBFIRST,table[i]);
+    digitalWrite(latchPin,HIGH); //将ST_CP这个针脚恢复到高电平
+    delay(500); 
+  }
+}

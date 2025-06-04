@@ -1,0 +1,30 @@
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.exe
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.pdb
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.xml
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.Form1.resources
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.Resources.resources
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.vbproj.GenerateResource.Cache
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.exe
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.xml
+c:\users\steve\documents\visual studio 2010\Projects\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.pdb
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.exe
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.xml
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.pdb
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.exe
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.pdb
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\bin\Debug\ArduinoCOM.xml
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.Form1.resources
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.Resources.resources
+C:\Users\Administrator\Downloads\ArduinoCOM\ArduinoCOM\ArduinoCOM\obj\x86\Debug\ArduinoCOM.vbproj.GenerateResource.Cache
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\ArduinoCOM.vbproj.GenerateResource.Cache
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\bin\Debug\TestCOM.exe
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\bin\Debug\TestCOM.pdb
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\bin\Debug\TestCOM.xml
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.Form1.resources
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.Resources.resources
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.exe
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.xml
+C:\Storage\arduino\Bluetooth\ArduinoCOM\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.pdb
+C:\Storage\arduino\Bluetooth\SerialComTest2015\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.exe
+C:\Storage\arduino\Bluetooth\SerialComTest2015\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.xml
+C:\Storage\arduino\Bluetooth\SerialComTest2015\VB COM Example\ArduinoCOM\obj\x86\Debug\TestCOM.pdb
