@@ -1,0 +1,3 @@
+Changed the TFTWIDTH and TFTHEIGHT 
+which works now with the 2.8 inch ESP32-2432S028R board
+Also switch the BLUE and RED 

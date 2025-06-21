@@ -1,0 +1,5 @@
+{
+    "mqtt_server":"broker.hivemq.com",
+    "mqttname":"LeRoy",
+    "host":"LeRoyLEDMatrix"
+}

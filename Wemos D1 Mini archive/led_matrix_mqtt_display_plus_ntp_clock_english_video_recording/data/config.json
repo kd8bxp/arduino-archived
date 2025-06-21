@@ -1,0 +1,5 @@
+{
+    "mqtt_server":"public-mqtt-broker.bevywise.com",
+    "mqttname":"LeRoy",
+    "host":"LeRoyLEDMatrix"
+}
