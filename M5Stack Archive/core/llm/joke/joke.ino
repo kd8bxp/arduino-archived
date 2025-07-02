@@ -1,0 +1,66 @@
+/*
+ * SPDX-FileCopyrightText: 2024 M5Stack Technology CO LTD
+ *
+ * SPDX-License-Identifier: MIT
+ */
+#include <Arduino.h>
+#include <M5Unified.h>
+#include <M5ModuleLLM.h>
+
+M5ModuleLLM module_llm;
+String llm_work_id;
+
+void setup()
+{
+    M5.begin();
+    M5.Display.setTextSize(2);
+    M5.Display.setTextScroll(true);
+
+    /* Init module serial port */
+    Serial2.begin(115200, SERIAL_8N1, 16, 17);  // Basic
+    // Serial2.begin(115200, SERIAL_8N1, 13, 14);  // Core2
+    // Serial2.begin(115200, SERIAL_8N1, 18, 17);  // CoreS3
+
+    /* Init module */
+    module_llm.begin(&Serial2);
+
+    /* Make sure module is connected */
+    M5.Display.printf(">> Check ModuleLLM connection..\n");
+    while (1) {
+        if (module_llm.checkConnection()) {
+            break;
+        }
+    }
+
+    /* Reset ModuleLLM */
+    M5.Display.printf(">> Reset ModuleLLM..\n");
+    module_llm.sys.reset();
+
+    /* Setup LLM module and save returned work id */
+    M5.Display.printf(">> Setup llm..\n");
+    llm_work_id = module_llm.llm.setup();
+}
+
+void loop()
+{
+    /* Make a question: What is {i} + {i} equal to? */
+    static int i = 0;
+    i++;
+   // std::string question = "What is " + std::to_string(i) + " + " + std::to_string(i) + " equal to?";
+std::string question = "Tell me a joke about " + std::to_string(i);
+    M5.Display.setTextColor(TFT_GREEN);
+    M5.Display.printf("<< %s\n", question.c_str());
+    M5.Display.setTextColor(TFT_YELLOW);
+    M5.Display.printf(">> ");
+
+    /* Push question to LLM module and wait inference result */
+    module_llm.llm.inferenceAndWaitResult(llm_work_id, question.c_str(), [](String& result) {
+        /* Show result on screen */
+        M5.Display.printf("%s", result.c_str());
+    });
+
+    M5.Display.println();
+    //module_llm.sys.reset();
+    //llm_work_id = module_llm.llm.setup();
+    delay(1000);
+}
