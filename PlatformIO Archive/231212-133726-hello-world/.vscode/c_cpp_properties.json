@@ -1,0 +1,36 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/include",
+                "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/src",
+                "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/.pio/libdeps/linux_x86_64/Unity/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/include",
+                    "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/src",
+                    "/home/lfmiller/Documents/PlatformIO/Projects/231212-133726-hello-world/.pio/libdeps/linux_x86_64/Unity/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60118",
+                ""
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "compilerArgs": [
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
